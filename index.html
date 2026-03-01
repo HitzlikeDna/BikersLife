@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BikesLife - Die Biker Kommunikation App</title>
+    <title>BikersLife - Die Biker Kommunikation App</title>
     <style>
         :root {
             --bg-dark: #121212;
             --bg-card: #1e1e1e;
             --text-primary: #ffffff;
             --text-secondary: #b0b0b0;
-            --accent-color: #ff4d00; /* Sportliches Orange */
+            --accent-color: #ff4d00;
             --accent-hover: #ff6a00;
         }
 
@@ -151,7 +151,6 @@
             color: var(--accent-color);
         }
 
-        /* Contact Form */
         .contact-section {
             padding: 100px 0;
             background-color: #181818;
@@ -187,7 +186,6 @@
             display: none;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 0;
@@ -201,7 +199,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Bikes<span>Life</span></div>
+                <div class="logo">Bikers<span>Life</span></div>
                 <div class="nav-actions">
                     <a href="help.html" class="nav-link">Anleitung</a>
                     <a href="#" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">App Laden</a>
@@ -220,11 +218,11 @@
 
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Warum BikesLife?</h2>
+            <h2 class="section-title">Warum BikersLife?</h2>
             <div class="grid">
                 <div class="card">
                     <h3>Smartes Audio</h3>
-                    <p>Rede mit deiner Crew, ohne wichtige Infos zu verpassen. BikesLife unterdrückt keine anderen Apps – Google Maps Ansagen bleiben klar verständlich.</p>
+                    <p>Rede mit deiner Crew, ohne wichtige Infos zu verpassen. BikersLife unterdrückt keine anderen Apps – Google Maps Ansagen bleiben klar verständlich.</p>
                 </div>
                 <div class="card">
                     <h3>Unbegrenzte Gruppen</h3>
@@ -246,7 +244,6 @@
         <div class="container">
             <h2 class="section-title">Kontakt</h2>
             <form class="contact-form" action="#" method="POST">
-                <!-- Honeypot Feld: Unsichtbar für Menschen, Bots füllen es oft aus -->
                 <input type="text" name="bot_check" class="hp-field" tabindex="-1" autocomplete="off">
 
                 <div class="form-group">
@@ -267,26 +264,23 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 BikesLife. Ride Safe.</p>
+            <p>&copy; 2026 BikersLife. Ride Safe.</p>
         </div>
     </footer>
 
     <script>
-        // Zeitpunkt des Seitenladens speichern
         const loadTime = Date.now();
 
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             const honeypot = document.querySelector('.hp-field');
             const submitTime = Date.now();
 
-            // 1. Honeypot Check: Wenn das unsichtbare Feld ausgefüllt ist -> Spam
             if (honeypot.value !== "") {
                 e.preventDefault();
                 console.log("Bot detected (Honeypot).");
                 return;
             }
 
-            // 2. Time-Check: Wenn das Formular schneller als in 3 Sekunden ausgefüllt wurde -> Wahrscheinlich Bot
             if ((submitTime - loadTime) < 3000) {
                 e.preventDefault();
                 console.log("Bot detected (Too fast).");
