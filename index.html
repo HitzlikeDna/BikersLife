@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikesLife - Die Biker Kommunikation App</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-color: #ff4d00; /* Sportliches Orange */
+            --accent-hover: #ff6a00;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.05);
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 100px 0;
+            background-color: var(--bg-dark);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        /* Contact Form */
+        .contact-section {
+            padding: 100px 0;
+            background-color: #181818;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--bg-dark);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .hp-field {
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary);
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Bikes<span>Life</span></div>
+                <div class="nav-actions">
+                    <a href="help.html" class="nav-link">Anleitung</a>
+                    <a href="#" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">App Laden</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Fahre gemeinsam.<br>Spreche sicher.</h1>
+            <p>Die ultimative Gruppen-Chat App für Motorradfahrer. Verbinde dich per QR-Code, rede ohne Limits und höre weiterhin deine Navigation.</p>
+            <a href="#features" class="btn">Features entdecken</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Warum BikesLife?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Smartes Audio</h3>
+                    <p>Rede mit deiner Crew, ohne wichtige Infos zu verpassen. BikesLife unterdrückt keine anderen Apps – Google Maps Ansagen bleiben klar verständlich.</p>
+                </div>
+                <div class="card">
+                    <h3>Unbegrenzte Gruppen</h3>
+                    <p>Egal wie groß die Ausfahrt ist. Bei uns gibt es keine Limitierung für die Anzahl der Teilnehmer in einer Gruppe.</p>
+                </div>
+                <div class="card">
+                    <h3>Blitzschneller Beitritt</h3>
+                    <p>Keine Wartezeit. Einfach QR-Code scannen oder Gruppencode eingeben und sofort losfahren. Kein kompliziertes Setup.</p>
+                </div>
+                <div class="card">
+                    <h3>Sicherheit Fokus</h3>
+                    <p>Hände an den Lenker! Die App ist so konzipiert, dass du während der Fahrt nicht am Handy hantieren musst.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <form class="contact-form" action="#" method="POST">
+                <!-- Honeypot Feld: Unsichtbar für Menschen, Bots füllen es oft aus -->
+                <input type="text" name="bot_check" class="hp-field" tabindex="-1" autocomplete="off">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Dein Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Deine E-Mail" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn" style="border: none; cursor: pointer; font-size: 1rem;">Senden</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BikesLife. Ride Safe.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Zeitpunkt des Seitenladens speichern
+        const loadTime = Date.now();
+
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            const honeypot = document.querySelector('.hp-field');
+            const submitTime = Date.now();
+
+            // 1. Honeypot Check: Wenn das unsichtbare Feld ausgefüllt ist -> Spam
+            if (honeypot.value !== "") {
+                e.preventDefault();
+                console.log("Bot detected (Honeypot).");
+                return;
+            }
+
+            // 2. Time-Check: Wenn das Formular schneller als in 3 Sekunden ausgefüllt wurde -> Wahrscheinlich Bot
+            if ((submitTime - loadTime) < 3000) {
+                e.preventDefault();
+                console.log("Bot detected (Too fast).");
+                alert("Das ging zu schnell! Bitte fülle das Formular in Ruhe aus.");
+            }
+        });
+    </script>
+</body>
+</html>

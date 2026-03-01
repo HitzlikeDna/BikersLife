@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikesLife - Hilfe & Anleitungen</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-color: #ff4d00;
+            --accent-hover: #ff6a00;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Guide Content */
+        .guide-section {
+            padding: 40px 0 80px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .guide-card {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            margin-bottom: 30px;
+        }
+
+        .guide-card h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+        }
+
+        .step-list li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Bikes<span>Life</span></a>
+                <div>
+                    <a href="index.html" class="nav-link">Zurück zur Startseite</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container guide-section">
+        <h1>Anleitungen & Hilfe</h1>
+
+        <div class="guide-card">
+            <h2>Wie erstelle ich eine Gruppe?</h2>
+            <p>Starte deine eigene Tour und lade Freunde ein. So geht's:</p>
+            <ol class="step-list">
+                <li>Öffne die BikesLife App und tippe auf dem Startbildschirm auf das große <strong>"+" Symbol</strong>.</li>
+                <li>Wähle <strong>"Neue Gruppe erstellen"</strong> aus.</li>
+                <li>Gib deiner Gruppe optional einen Namen (z.B. "Sonntagsfahrt").</li>
+                <li>Die Gruppe ist nun aktiv! Du siehst sofort einen <strong>QR-Code</strong> und einen 6-stelligen <strong>Gruppencode</strong> auf deinem Bildschirm.</li>
+                <li>Zeige den QR-Code deinen Freunden zum Scannen oder teile den Code über WhatsApp/Messenger.</li>
+            </ol>
+        </div>
+
+        <div class="guide-card">
+            <h2>Wie trete ich einer Gruppe bei?</h2>
+            <p>Verbinde dich schnell mit einer bestehenden Crew:</p>
+            <ol class="step-list">
+                <li>Öffne die App und tippe auf <strong>"Beitreten"</strong>.</li>
+                <li>Du hast nun zwei Möglichkeiten:
+                    <br><br>
+                    <strong>A) QR-Code Scannen:</strong> Die Kamera öffnet sich. Halte sie einfach über den Code des Gruppenführers.
+                    <br>
+                    <strong>B) Code eingeben:</strong> Tippe den 6-stelligen Code ein, den du erhalten hast.
+                </li>
+                <li>Sobald erkannt, bist du automatisch im Voice-Chat verbunden.</li>
+                <li>Stecke das Handy weg und fahre los – die Verbindung bleibt im Hintergrund aktiv.</li>
+            </ol>
+        </div>
+
+        <div class="guide-card">
+            <h2>Audio & Navigation</h2>
+            <p>BikesLife ist darauf ausgelegt, parallel zu laufen.</p>
+            <ul style="color: var(--text-secondary); padding-left: 20px;">
+                <li>Starte zuerst deine Musik oder Google Maps Navigation.</li>
+                <li>Öffne dann BikesLife und trete der Gruppe bei.</li>
+                <li>Die Lautstärke der Navigation wird nicht reduziert (kein "Ducking"), damit du Anweisungen klar verstehst, während du mit deinen Freunden redest.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
